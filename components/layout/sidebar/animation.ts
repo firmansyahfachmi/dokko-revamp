@@ -1,7 +1,12 @@
 export const menuSlide = {
-    initial: {x: "calc(100% + 100px)"},
+    initial: {x: "130%"},
     enter: {x: "0", transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]}},
-    exit: {x: "calc(100% + 100px)", transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]}}
+    exit: {x: "130%", transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]}}
+}
+export const opacitySide = {
+    initial: { opacity: 0 },
+    enter: {opacity: 1, transition: { duration: 0.3, delay: 0.8}},
+    exit: {opacity: 0, transition: { duration: 0.1 }}
 }
 
 export const slide = {

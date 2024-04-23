@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { menuSlide } from "./animation";
+import { menuSlide, opacitySide } from "./animation";
 import Link from "./Link";
 import Curve from "./Curve";
 import Footer from "./Footer";
 
-import icoClose from '@/public/icons/ic-close.png'
+import icoClose from "@/public/icons/ic-close.png";
 import Image from "next/image";
 
 const navItems = [
@@ -29,7 +29,7 @@ const navItems = [
   },
 ];
 
-export default function SideBar({handleClose}: any) {
+export default function SideBar({ handleClose }: any) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
@@ -41,10 +41,25 @@ export default function SideBar({handleClose}: any) {
       exit="exit"
       className={styles.menu}
     >
-      <div className={styles.glass} onClick={() => handleClose()}></div>
+      <motion.div
+        variants={opacitySide}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        className={styles.glass}
+        onClick={() => handleClose()}
+      ></motion.div>
+      {/* <Curve /> */}
       <div className={styles.body}>
-        <div className="w-[74px] h-[74px] rounded-full border border-primary flex cursor-pointer absolute top-10 right-[100px]" onClick={() => handleClose()}>
-            <Image src={icoClose} alt=""  className="mx-auto my-auto w-[30px] h-[30px]"/>
+        <div
+          className="w-[74px] h-[74px] rounded-full border border-primary flex cursor-pointer absolute top-10 right-[100px]"
+          onClick={() => handleClose()}
+        >
+          <Image
+            src={icoClose}
+            alt=""
+            className="mx-auto my-auto w-[30px] h-[30px]"
+          />
         </div>
         <div
           onMouseLeave={() => {
@@ -65,7 +80,6 @@ export default function SideBar({handleClose}: any) {
         </div>
         <Footer />
       </div>
-      <Curve />
     </motion.div>
   );
 }
