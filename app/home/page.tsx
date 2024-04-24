@@ -5,6 +5,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
 import colorGrade1 from "@/public/images/color-grade-1.png";
+import Scene3D from "@/components/Scene";
+import dynamic from "next/dynamic";
+
+const Scene = dynamic(() => import("@/components/Scene"), {
+  ssr: false,
+});
 
 export default function Home() {
   const hero = useRef(null);
@@ -26,8 +32,8 @@ export default function Home() {
             className="!text-[85px]"
           >
             <motion.div
-              initial={{  opacity: 0 }}
-              animate={{  opacity: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
             >
               Crafting Immersive Digital Journeys Through Innovative Design and
@@ -37,6 +43,11 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="flex h-[100vh] absolute top-[400px] right-[20%] z-[2] rotate-12">
+        <Scene />
+      </div>
+
+      <div className="!h-[100vh] w-full">sasas</div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
