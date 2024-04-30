@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar sticky top-0 py-6 header-glass z-[100]">
-        <div className="max-w-[1440px] w-full mx-auto">
+        <div className="max-w-[1400px] w-full mx-auto">
           <div className="flex-1">
             <a className="">
               <Image src={Logo} alt="" height={30} />

@@ -7,7 +7,7 @@ import { useControls } from "leva";
 export default function Models() {
   const { nodes } = useGLTF("/media/log.glb");
   const { viewport } = useThree();
-  const log = useRef(null);
+  const log = useRef<any>(null);
 
   useFrame(() => {
     log.current.rotation.y += 0.005;
