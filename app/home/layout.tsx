@@ -1,6 +1,5 @@
 "use client";
 
-
 import Layout from "@/components/layout/Layout";
 import { PropsWithChildren } from "react";
 

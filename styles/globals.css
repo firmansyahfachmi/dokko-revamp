@@ -13,16 +13,21 @@
   src: url("../public/fonts/DMSans-Regular.ttf");
 }
 @font-face {
-  font-family: "DMSans-Regular";
+  font-family: "DMSans-Bold";
   src: url("../public/fonts/DMSans-Bold.ttf");
 }
 @font-face {
-  font-family: "DMSans-Regular";
+  font-family: "DMSans-Medium";
   src: url("../public/fonts/DMSans-Medium.ttf");
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: white;
+  
+  
 }
 
 
@@ -92,3 +97,15 @@ html.has-scroll-dragging {
   [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
     right: auto;
     bottom: 0; }
+
+
+    .header-glass{
+      /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(5px);
+border-bottom: 1px solid #ffffff70;
+    }
+
+    
