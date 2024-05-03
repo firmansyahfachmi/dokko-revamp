@@ -9,6 +9,7 @@ import Scene3D from "@/components/Scene";
 import dynamic from "next/dynamic";
 import Projects from "@/components/Projects";
 import styles from "./style.module.scss";
+import Link from "next/link";
 
 const Scene = dynamic(() => import("@/components/Scene"), {
   ssr: false,
@@ -25,9 +26,9 @@ const partners = [
 export default function Home() {
   const hero = useRef(null);
   return (
-    <div ref={hero} data-scroll-container className="relative">
+    <div ref={hero} className="relative">
       <div className="h-[100vh] pt-[100px] z-[2]">
-        <div className="max-w-[1400px] w-full mx-auto my-auto">
+        <div className="max-w-[1400px] w-full mx-auto my-auto" >
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "40%" }}
@@ -39,6 +40,7 @@ export default function Home() {
             weight="ralewayRegular"
             size="heading-1"
             className="!text-[85px]"
+            
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -56,6 +58,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
+        
       >
         <Image
           src={colorGrade1}
@@ -89,19 +92,35 @@ export default function Home() {
         <Projects />
       </div>
 
-      <div className="h-[100vh] max-w-[1400px] w-full mx-auto mt-[250px] !relative">
+      <div className="min-h-[500px] max-w-[1400px] w-full mx-auto mt-[250px] !relative">
         <Text className="w-[300px] mb-10" variant="primary">
           Partners we&lsquo;ve connected with along our journey.
         </Text>
         <div className={`flex gap-4 ${styles.partners}`}>
-          <Text size="heading-3" className={styles.item}>Yupiek Food</Text>
-          <Text size="heading-3" className={styles.item}>GMS Farm</Text>
-          <Text size="heading-3" className={styles.item}>Cerebrofort</Text>
+          <Text size="heading-3" className={styles.item}>
+            Yupiek Food
+          </Text>
+          <Text size="heading-3" className={styles.item}>
+            GMS Farm
+          </Text>
+          <Text size="heading-3" className={styles.item}>
+            Cerebrofort
+          </Text>
         </div>
-        <div className={`flex gap-4 ${styles.partners}`}>
-          <Text size="heading-3" className={styles.item}>Oneproklin</Text>
-          <Text size="heading-3" className={styles.item}>PPT Energy Singapore</Text>
+        <div className={`flex gap-4 ${styles.partners} mb-8`}>
+          <Text size="heading-3" className={styles.item}>
+            Oneproklin
+          </Text>
+          <Text size="heading-3" className={styles.item}>
+            PPT Energy Singapore
+          </Text>
         </div>
+
+        <Link href={""}>
+          <Text size="caption" className="underline decoration-primary ">
+            See more
+          </Text>
+        </Link>
       </div>
     </div>
   );

@@ -21,10 +21,12 @@
   src: url("../public/fonts/DMSans-Medium.ttf");
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: white;
   
-    overflow: hidden; /* Hide scrollbars */
   
 }
 
