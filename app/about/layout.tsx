@@ -1,7 +1,12 @@
-import React from 'react'
+"use client";
 
-export default function layout() {
+import Layout from "@/components/layout/Layout";
+import { PropsWithChildren } from "react";
+
+export default function AboutLayout({ children }: PropsWithChildren) {
   return (
-    <div>layout</div>
-  )
+    <>
+      <Layout>{children}</Layout>
+    </>
+  );
 }
