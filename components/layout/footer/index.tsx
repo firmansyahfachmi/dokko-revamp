@@ -11,24 +11,26 @@ export default function Footer() {
             <Text size="heading-2" weight="ralewayRegular" className="w-[50%]">
               Let&apos;s work together
             </Text>
+            <Link href={'/contact'}>
             <div className="px-5 py-3 border border-primary rounded-full w-fit mt-4 cursor-pointer">
               <Text size="caption">Get in touch</Text>
             </div>
+            </Link>
           </div>
           <div className="w-[15%] flex flex-col gap-4">
             <Text size="caption" variant="primary">
               Navigate
             </Text>
-            <Link href={""}>
+            <Link href={"/"}>
               <Text weight="medium">Home</Text>
             </Link>
-            <Link href={""}>
+            <Link href={"/about"}>
               <Text weight="medium">About</Text>
             </Link>
-            <Link href={""}>
+            <Link href={"/work"}>
               <Text weight="medium">Work</Text>
             </Link>
-            <Link href={""}>
+            <Link href={"/contact"}>
               <Text weight="medium">Contact</Text>
             </Link>
           </div>

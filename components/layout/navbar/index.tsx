@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SideBar from "../sidebar";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -21,12 +22,12 @@ export default function Navbar() {
  
   return (
     <>
-      <div className="navbar sticky top-0 py-6 header-glass z-[100]">
+      <div className="navbar fixed top-0 py-6 header-glass z-[100]">
         <div className="max-w-[1400px] w-full mx-auto">
           <div className="flex-1">
-            <a className="">
+            <Link href={'/'}>
               <Image src={Logo} alt="" height={30} />
-            </a>
+            </Link>
           </div>
           <div className="flex-none">
             <a

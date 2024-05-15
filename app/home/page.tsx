@@ -52,7 +52,7 @@ const services = [
 export default function Home() {
   return (
     <div  className="relative overflow-hidden">
-      <div className="h-[100vh] pt-[100px] z-[2]">
+      <div className="h-[100vh] pt-[200px] z-[2]">
         <div className="max-w-[1400px] w-full mx-auto my-auto">
           <motion.div
             initial={{ width: 0 }}
@@ -166,20 +166,20 @@ export default function Home() {
           <Text size="heading-3" className={styles.item}>
             GMS Farm
           </Text>
-          <Text size="heading-3" className={styles.item}>
+          {/* <Text size="heading-3" className={styles.item}>
             Cerebrofort
-          </Text>
+          </Text> */}
         </div>
-        <div className={`flex gap-4 ${styles.partners} mb-8`}>
+        {/* <div className={`flex gap-4 ${styles.partners} mb-8`}>
           <Text size="heading-3" className={styles.item}>
             Oneproklin
           </Text>
           <Text size="heading-3" className={styles.item}>
             PPT Energy Singapore
           </Text>
-        </div>
+        </div> */}
 
-        <Link href={""}>
+        <Link href={"/work"}>
           <Text size="caption" className="underline decoration-primary ">
             See more
           </Text>
