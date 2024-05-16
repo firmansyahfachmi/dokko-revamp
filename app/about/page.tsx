@@ -29,7 +29,7 @@ export default function About() {
         <Image src={aboutHero} alt="" className="h-full w-full" />
         <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-full flex items-center">
           <Text
-            className="text-[100px] w-[70%] leading-[130px]"
+            className="!text-[100px] w-[70%] leading-[130px]"
             weight="ralewayRegular"
           >
             Transforming ideas into{" "}
@@ -40,10 +40,10 @@ export default function About() {
       <div className="max-w-[1400px] w-full mx-auto my-auto py-[190px]">
         <div className="flex">
           <div className="w-5/12">
-            <Text size="heading-4"> our story</Text>
+            <Text size="heading-5"> our story</Text>
           </div>
           <div className="w-7/12">
-            <Text align="justify">
+            <Text  size="body-2">
               In the world of virtual agencies, we combine our skills to come up
               with clever solutions. Dokko is unique because we carefully create
               digital experiences that spark inspiration, empowerment, and
@@ -55,7 +55,7 @@ export default function About() {
         </div>
         <div className="flex mt-[200px]">
           <div className="w-5/12">
-            <Text size="heading-4"> our method</Text>
+            <Text size="heading-5"> our method</Text>
           </div>
           <div className="w-7/12">
             {methods.map((item, index) => (
@@ -67,12 +67,12 @@ export default function About() {
               >
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title !px-0">
-                  <Text size="heading-6" variant="primary">
+                  <Text size="body-1" variant="primary">
                     {item.title}
                   </Text>
                 </div>
                 <div className="collapse-content mb-3 !px-0">
-                  <Text>{item.desc}</Text>
+                  <Text size="body-2">{item.desc}</Text>
                 </div>
               </div>
             ))}

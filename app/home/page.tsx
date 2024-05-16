@@ -95,7 +95,7 @@ export default function Home() {
       </div>
 
       <div className="!h-[50vh] max-w-[1400px] w-full mx-auto my-auto">
-        <Text className="w-[45%]" align="justify">
+        <Text className="w-[45%]" size="body-2">
           Discover unrivaled excellence as we elevate your brand, exceeding
           expectations at every turn. With dedication and expertise, we ensure
           each interaction leaves a lasting impression, immersing customers in

@@ -11,7 +11,7 @@ export default function Contact() {
         <Image src={contactHero} alt="" className="h-full w-full" />
         <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-full flex items-center">
           <Text
-            className="text-[100px] w-[80%] leading-[130px]"
+            className="!text-[100px] w-[80%] leading-[130px]"
             weight="ralewayRegular"
           >
             Generate <span className="text-primary">meaningful</span> creations
