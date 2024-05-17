@@ -95,7 +95,7 @@ export default function Home() {
       </div>
 
       <div className="!h-[50vh] max-w-[1400px] w-full mx-auto my-auto">
-        <Text className="w-[45%]" align="justify">
+        <Text className="w-[45%]" size="body-2">
           Discover unrivaled excellence as we elevate your brand, exceeding
           expectations at every turn. With dedication and expertise, we ensure
           each interaction leaves a lasting impression, immersing customers in
@@ -155,7 +155,7 @@ export default function Home() {
           className="absolute left-0 top-[2250px] h-[1200px] w-auto z-[0]"
         />
 
-      <div className="min-h-[500px] max-w-[1400px] w-full mx-auto mt-[300px]">
+      <div className="min-h-[700px] max-w-[1400px] w-full mx-auto mt-[300px] z-[1]">
         <Text className="w-[300px] mb-10" variant="primary">
           Partners we&lsquo;ve connected with along our journey.
         </Text>
