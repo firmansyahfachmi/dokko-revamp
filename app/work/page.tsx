@@ -55,7 +55,7 @@ export default function Work() {
               </div>
               <div className="pl-5 mt-6">
                 <Text size="heading-6">{item.name}</Text>
-                <Text variant="primary">{item.category}</Text>
+                <Text variant="primary" size="body-2">{item.category}</Text>
               </div>
             </Link>
           ))}

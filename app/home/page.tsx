@@ -155,7 +155,7 @@ export default function Home() {
           className="absolute left-0 top-[2250px] h-[1200px] w-auto z-[0]"
         />
 
-      <div className="min-h-[500px] max-w-[1400px] w-full mx-auto mt-[300px]">
+      <div className="min-h-[700px] max-w-[1400px] w-full mx-auto mt-[300px] z-[1]">
         <Text className="w-[300px] mb-10" variant="primary">
           Partners we&lsquo;ve connected with along our journey.
         </Text>

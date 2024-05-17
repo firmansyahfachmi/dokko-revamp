@@ -38,10 +38,10 @@ export default function Footer() {
             <Text size="caption" variant="primary">
               Socials
             </Text>
-            <Link href={""}>
+            <Link href={"https://www.instagram.com/loominace/"}>
               <Text weight="medium">Instagram</Text>
             </Link>
-            <Link href={""}>
+            <Link href={"https://www.linkedin.com/company/loominace"}>
               <Text weight="medium">Linkedin</Text>
             </Link>
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
       <div className=" bg-primary-dark h-[60px] w-full flex">
         <div className="max-w-[1400px] w-full mx-auto my-auto">
           <Text size="caption" className="text-white">
-            © Copyright 2024. All Rights Reserved. dokko.id
+            © Copyright 2024. All Rights Reserved. loominace.com
           </Text>
         </div>
       </div>
