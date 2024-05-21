@@ -144,12 +144,13 @@ export default function Home() {
               const { img, title, desc } = item;
               return (
                 <div className="flex flex-col gap-4" key={index}>
-                  <div className="h-[30px] lg:h-[50px] w-auto">
+                  <div className="h-[30px] lg:h-[50px] w-[30px] lg:w-[50px]">
                     <Image
                       src={`/icons/${img}`}
                       alt=""
                       width={50}
                       height={50}
+                      className="object-contain"
                     />
                   </div>
                   <Text weight="medium" size="body-1">
@@ -168,7 +169,7 @@ export default function Home() {
       <Image
         src={accentLeft}
         alt=""
-        className="absolute left-0 top-[1150px] md:top-[1000px] xl:top-[2000px] h-[600px] xl:h-[1000px] w-auto z-[0]"
+        className="absolute left-0 top-[900px] md:top-[1000px] xl:top-[2000px] h-[600px] xl:h-[1000px] w-auto z-[0]"
       />
 
       <div className="min-h-[400px] xl:min-h-[600px] max-w-[1400px] w-full mx-auto mt-[180px] xl:mt-[300px] z-[2] px-6 md:px-8 xl:px-0">
@@ -176,10 +177,10 @@ export default function Home() {
           Partners we&lsquo;ve connected with along our journey.
         </Text>
         <div className={`flex gap-4 ${styles.partners}`}>
-          <Text size="heading-4" className={styles.item}>
+          <Text size="heading-5" className={styles.item}>
             Yupiek Food
           </Text>
-          <Text size="heading-4" className={styles.item}>
+          <Text size="heading-5" className={styles.item}>
             GMS Farm
           </Text>
           {/* <Text size="heading-3" className={styles.item}>
