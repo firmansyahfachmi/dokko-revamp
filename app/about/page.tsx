@@ -26,11 +26,11 @@ const methods = [
 export default function About() {
   return (
     <div className="relative overflow-hidden">
-      <div className="h-[100vh] z-[2] relative">
-        <Image src={aboutHero} alt="" className="h-full w-full" />
+      <div className="h-[60vh] xl:h-[100vh] z-[2] relative">
+        <Image src={aboutHero} alt="" className="h-full w-full object-cover" />
         <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-full flex items-center">
           <Text
-            className="!text-[100px] w-[70%] leading-[130px]"
+            className="!text-[32px] md:!text-[46px] lg:!text-[62px] xl:!text-[100px] lg:w-[70%] px-6 md:px-8 xl:px-0"
             weight="ralewayRegular"
           >
             Transforming ideas into{" "}
@@ -38,22 +38,22 @@ export default function About() {
           </Text>
         </div>
       </div>
-      <div className="max-w-[1400px] w-full mx-auto my-auto py-[190px]">
-        <div className="flex">
-          <div className="w-5/12">
+      <div className="max-w-[1400px] w-full mx-auto my-auto py-[80px] lg:py-[190px] px-6 md:px-8 xl:px-0">
+        <div className="flex flex-col md:flex-row">
+          <div className="w-5/12 mb-8 lg:mb-0">
             <Text size="heading-5"> our story</Text>
           </div>
-          <div className="w-7/12">
+          <div className="w-full lg:w-7/12">
             <Text size="body-2">
               In the industry of virtual agencies, we stand out for our attention to detail in creating digital experiences that spark inspiration, empowerment and change. As frontrunners in the software space, we thrive on turning big visions into concrete realities. Let&apos;s collaborate to shape a future where the limitless potential of technology catalyzes incredible results for businesses.
             </Text>
           </div>
         </div>
-        <div className="flex mt-[200px]">
-          <div className="w-5/12">
+        <div className="flex flex-col md:flex-row mt-[100px] lg:mt-[200px]">
+          <div className="w-5/12 mb-8 lg:mb-0">
             <Text size="heading-5"> our method</Text>
           </div>
-          <div className="w-7/12">
+          <div className="w-full lg:w-7/12">
             {methods.map((item, index) => (
               <div
                 className={` collapse collapse-arrow mb-4 ${

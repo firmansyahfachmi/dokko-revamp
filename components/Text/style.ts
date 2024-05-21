@@ -8,7 +8,7 @@ export const variantStyles = {
 }
 
 export const sizeStyles = {
-    'heading-1': 'text-[96px]',
+    'heading-1': 'text-[62px] lg:text-[96px]',
     'heading-2': 'text-[32px] lg:text-[64px]',
     'heading-3': 'text-[32px] lg:text-[64px]',
     'heading-4': 'text-[28px] lg:text-[48px]',

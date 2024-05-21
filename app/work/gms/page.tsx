@@ -12,13 +12,13 @@ import accentLeft from "@/public/images/accent-left.png";
 export default function page() {
   return (
     <>
-      <div className="h-[70vh] z-[2] relative">
+      <div className="h-[50vh] lg:h-[70vh] z-[2] relative">
         <Image src={gms} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="border-b border-light-grey">
-        <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[90px] pb-[120px]">
+        <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[50px] lg:pt-[90px] pb-[70px] lg:pb-[120px] px-6 md:px-8 xl:px-0">
           <Text
-            className="w-[80%] leading-[130px] pb-[90px]"
+            className="w-[80%] pb-[90px]"
             weight="ralewayRegular"
             size="heading-2"
           >
@@ -27,27 +27,27 @@ export default function page() {
 
           <div className="flex">
             <div className="w-4/12 flex flex-col gap-2">
-              <Text variant="primary" size="body-2">
+              <Text variant="primary" size="caption">
                 Industry
               </Text>
-              <Text>Food and Beverage</Text>
+              <Text size="body-2">Food and Beverage</Text>
             </div>
             <div className="w-6/12 flex flex-col gap-2">
-              <Text variant="primary" size="body-2">
+              <Text variant="primary" size="caption">
                 Client
               </Text>
-              <Text>Gudang Madu Sumatera</Text>
+              <Text size="body-2">Gudang Madu Sumatera</Text>
             </div>
             <div className="w-4/12 flex flex-col gap-2">
-              <Text variant="primary" size="body-2">
+              <Text variant="primary" size="caption">
                 Services
               </Text>
-              <Text>Web Development</Text>
+              <Text size="body-2">Web Development</Text>
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center  h-[600px] ">
+      <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center  min-h-[300px] py-10 lg:min-h-[600px] px-6 md:px-8 xl:px-0">
         <Text>
           Gudang Madu Sumatera (GMS) is an integrated sustainable beekeeping
           company built on the foundation of empowering forest communities in
@@ -58,12 +58,12 @@ export default function page() {
           awareness and support for the environment.
         </Text>
       </div>
-      <div className="flex border-y border-light-grey">
-        <div className="w-5/12 h-[700px] border-r border-light-grey">
+      <div className="flex flex-col md:flex-row border-y border-light-grey">
+        <div className="md:w-5/12 lg:h-[700px] border-r border-light-grey">
           <Image src={gmsweb} alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="w-7/12 flex flex-col justify-center items-center">
-          <div className="w-6/12">
+        <div className="md:w-7/12 flex flex-col justify-center items-center py-8 lg:pb-0">
+          <div className="w-10/12 lg:w-6/12">
             <Text variant="primary" size="caption" className="mb-4">
               Purpose
             </Text>
@@ -93,9 +93,9 @@ export default function page() {
         <Image
           src={accentLeft}
           alt=""
-          className="absolute left-0 bottom-[-760px] h-[1200px] w-auto z-[0]"
+          className="absolute left-0 bottom-[-760px] h-[1200px] w-auto z-[0] hidden md:block"
         />
-        <div className="max-w-[1400px] w-full mx-auto my-auto flex flex-col items-center justify-center  h-[250px] ">
+        <div className="max-w-[1400px] w-full mx-auto my-auto flex flex-col items-center justify-center h-[150px]  lg:h-[250px] px-6 md:px-8 xl:px-0">
           <div className="flex flex-col items-end gap-4 w-full">
             <Text size="caption" variant="primary">
               Next Project
