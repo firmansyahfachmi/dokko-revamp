@@ -177,10 +177,10 @@ export default function Home() {
           Partners we&lsquo;ve connected with along our journey.
         </Text>
         <div className={`flex gap-4 ${styles.partners}`}>
-          <Text size="heading-4" className={styles.item}>
+          <Text size="heading-5" className={styles.item}>
             Yupiek Food
           </Text>
-          <Text size="heading-4" className={styles.item}>
+          <Text size="heading-5" className={styles.item}>
             GMS Farm
           </Text>
           {/* <Text size="heading-3" className={styles.item}>
