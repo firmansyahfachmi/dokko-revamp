@@ -5,9 +5,9 @@ import * as React from "react";
 export default function Footer() {
   return (
     <div className="z-[1]">
-      <div className="bg-white w-full border-t border-light-grey py-[100px]">
-        <div className="max-w-[1400px] w-full mx-auto flex">
-          <div className="w-[80%]">
+      <div className="bg-white w-full border-t border-light-grey py-[60px] lg:py-[100px]">
+        <div className="max-w-[1400px] w-full mx-auto flex flex-col lg:flex-row px-6 lg:px-0">
+          <div className="lg:w-[80%] flex lg:flex-col justify-between mb-12 lg:mb-0">
             <Text size="heading-2" weight="ralewayRegular" className="w-[50%]">
               Let&apos;s work together
             </Text>
@@ -17,6 +17,7 @@ export default function Footer() {
             </div>
             </Link>
           </div>
+          <div className="flex gap-[70px] lg:gap-[120px]">
           <div className="w-[15%] flex flex-col gap-4">
             <Text size="caption" variant="primary">
               Navigate
@@ -45,9 +46,10 @@ export default function Footer() {
               <Text weight="medium">Linkedin</Text>
             </Link>
           </div>
+          </div>
         </div>
       </div>
-      <div className=" bg-primary-dark h-[60px] w-full flex">
+      <div className=" bg-primary-dark h-[60px] w-full flex px-6 lg:px-0">
         <div className="max-w-[1400px] w-full mx-auto my-auto">
           <Text size="caption" className="text-white">
             © Copyright 2024. All Rights Reserved. loominace.com

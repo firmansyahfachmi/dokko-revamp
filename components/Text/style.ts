@@ -9,15 +9,15 @@ export const variantStyles = {
 
 export const sizeStyles = {
     'heading-1': 'text-[96px]',
-    'heading-2': 'text-[64px]',
-    'heading-3': 'text-[64px]',
-    'heading-4': 'text-[48px]',
-    'heading-5': 'text-[40px]',
-    'heading-6': 'text-[36px]',
-    'base' : 'text-[24px]',
-    'body-1': 'text-[24px]',
-    'body-2': 'text-[20px]',
-    'caption': 'text-[16px]',
+    'heading-2': 'text-[32px] lg:text-[64px]',
+    'heading-3': 'text-[32px] lg:text-[64px]',
+    'heading-4': 'text-[28px] lg:text-[48px]',
+    'heading-5': 'text-[24px] lg:text-[40px]',
+    'heading-6': 'text-[20px] lg:text-[36px]',
+    'base' : 'text-[16px] lg:text-[24px]',
+    'body-1': 'text-[16px] lg:text-[24px]',
+    'body-2': 'text-[14px] lg:text-[20px]',
+    'caption': 'text-[12px] lg:text-[16px]',
 }
 
 export const weightStyles = {

@@ -52,7 +52,7 @@ const services = [
 export default function Home() {
   return (
     <div  className="relative overflow-hidden">
-      <div className="h-[100vh] pt-[200px] z-[2]">
+      <div className="h-[750px] lg:h-[100vh] pt-[150px] lg:pt-[200px] z-[2] px-6 lg:px-0">
         <div className="max-w-[1400px] w-full mx-auto my-auto">
           <motion.div
             initial={{ width: 0 }}
@@ -64,7 +64,7 @@ export default function Home() {
           <Text
             weight="ralewayRegular"
             size="heading-1"
-            className="!text-[85px]"
+            className="!text-[32px] lg:!text-[85px]"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -86,25 +86,25 @@ export default function Home() {
         <Image
           src={colorGrade1}
           alt=""
-          className="absolute right-0 top-[150px] h-[1500px] w-auto z-[0]"
+          className="absolute right-0 top-[280px] lg:top-[150px] h-[400px] lg:h-[1500px] w-auto z-[0]"
         />
       </motion.div>
 
-      <div className="flex h-[100vh] absolute top-[500px] right-[15%] z-[2] rotate-12">
+      <div className="flex h-[100vh] absolute top-[8%] lg:top-[500px] right-[-200px] lg:right-[15%] z-[2] rotate-12">
         <Scene />
       </div>
 
-      <div className="!h-[25vh] max-w-[1400px] w-full mx-auto my-auto">
-        <Text className="w-[45%]" size="body-2">
+      <div className="h-fit lg:!h-[25vh] max-w-[1400px] w-full mx-auto my-auto  px-6 lg:px-0">
+        <Text className="w-[80%] lg:w-[45%]" size="body-2">
           Discover unrivaled excellence as we elevate your brand, exceeding
           expectations at every turn. With dedication and expertise, we ensure
           each interaction leaves a lasting impression, immersing customers in
           transformative experiences.
         </Text>
       </div>
-      <div className=" max-w-[1400px] w-full mx-auto mt-[200px] !relative">
+      <div className=" max-w-[1400px] w-full mx-auto mt-[200px] !relative  px-6 lg:px-0">
         <Text
-          className="w-[50%]"
+          className="lg:w-[50%]"
           align="justify"
           variant="primary"
           size="heading-5"
@@ -115,20 +115,20 @@ export default function Home() {
         <Projects />
       </div>
 
-      <div className=" max-w-[1400px] w-full mx-auto mt-[300px]">
-        <div className="flex">
-          <div className="border-r border-primary-dark w-[40%] pt-10">
+      <div className=" max-w-[1400px] w-full mx-auto mt-[100px] lg:mt-[300px] px-6 lg:px-0 z-[2]">
+        <div className="flex flex-col lg:flex-row">
+          <div className="lg:border-r border-primary-dark lg:w-[40%] pt-10">
             <div className="flex items-center gap-10 ">
               <Text size="heading-4">What we do</Text>
-              <Image src={icoArrowRight} height={30} alt="" />
+              <Image src={icoArrowRight} height={30} alt="" className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]" />
             </div>
           </div>
-          <div className="pt-10 w-[60%] pl-[150px] grid grid-cols-2 gap-x-[100px] gap-y-[50px]">
+          <div className="pt-10 lg:w-[60%] lg:pl-[150px] grid lg:grid-cols-2 gap-x-[100px] gap-y-[50px]">
             {services.map((item, index) => {
               const { img, title, desc } = item;
               return (
                 <div className="flex flex-col gap-4" key={index}>
-                  <div className="h-[50px] w-[50px]">
+                  <div className="h-[30px] lg:h-[50px] w-[30px] lg:w-[50px]">
                     <Image
                       src={`/icons/${img}`}
                       alt=""
@@ -152,18 +152,18 @@ export default function Home() {
       <Image
           src={accentLeft}
           alt=""
-          className="absolute left-0 top-[2250px] h-[1200px] w-auto z-[0]"
+          className="absolute left-0 top-[1250px] lg:top-[2000px] h-[600px] lg:h-[1000px] w-auto z-[0]"
         />
 
-      <div className="min-h-[700px] max-w-[1400px] w-full mx-auto mt-[300px] z-[1]">
+      <div className="min-h-[400px] lg:min-h-[700px] max-w-[1400px] w-full mx-auto mt-[180px] lg:mt-[300px] z-[1] px-6 lg:px-0">
         <Text className="w-[300px] mb-10" variant="primary">
           Partners we&lsquo;ve connected with along our journey.
         </Text>
         <div className={`flex gap-4 ${styles.partners}`}>
-          <Text size="heading-3" className={styles.item}>
+          <Text size="heading-4" className={styles.item}>
             Yupiek Food
           </Text>
-          <Text size="heading-3" className={styles.item}>
+          <Text size="heading-4" className={styles.item}>
             GMS Farm
           </Text>
           {/* <Text size="heading-3" className={styles.item}>
@@ -179,8 +179,8 @@ export default function Home() {
           </Text>
         </div> */}
 
-        <Link href={"/work"}>
-          <Text size="caption" className="underline decoration-primary ">
+        <Link href={"/work"} >
+          <Text size="caption" className="underline decoration-primary mt-8">
             See more
           </Text>
         </Link>
@@ -189,7 +189,7 @@ export default function Home() {
       <Image
           src={accentBottom}
           alt=""
-          className="absolute right-0 bottom-[-900px] h-[1300px] w-auto z-[0]"
+          className="absolute right-0 bottom-[-50px] lg:bottom-[-800px] h-[200px] lg:h-[1200px] w-auto z-[0]"
         />
     </div>
   );
