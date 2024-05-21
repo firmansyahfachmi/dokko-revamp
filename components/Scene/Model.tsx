@@ -23,13 +23,13 @@ export default function Models() {
   });
 
   return (
-    <group ref={log} scale={viewport.width / 11.5}>
-      <mesh {...nodes.Circle001}>
+    <group ref={log} scale={viewport.width / 9}>
+      {/* <mesh {...nodes.Circle001}>
         <MeshTransmissionMaterial {...materialProps} />
-      </mesh>
-      <mesh {...nodes.Text003}>
+      </mesh> */}
+      {/* <mesh {...nodes.Text003}>
         <MeshTransmissionMaterial {...materialProps} />
-      </mesh>
+      </mesh> */}
       <mesh {...nodes.Text001}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>

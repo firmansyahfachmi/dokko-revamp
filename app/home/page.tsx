@@ -90,7 +90,7 @@ export default function Home() {
         />
       </motion.div>
 
-      <div className="flex h-[100vh] absolute top-[400px] right-[20%] z-[2] rotate-12">
+      <div className="flex h-[100vh] absolute top-[500px] right-[15%] z-[2] rotate-12">
         <Scene />
       </div>
 

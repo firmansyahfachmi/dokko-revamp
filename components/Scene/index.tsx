@@ -6,7 +6,7 @@ import { Leva } from "leva";
 
 export default function Index() {
   return (
-    <Canvas className=" !w-[600px] scale-125 pr-[150px]">
+    <Canvas className=" !w-[800px] pr-[150px]">
       <Model />
       <directionalLight intensity={0} position={[0, 21, 21]} />
       <Environment preset="city" />
