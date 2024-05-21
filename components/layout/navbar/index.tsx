@@ -22,11 +22,11 @@ export default function Navbar() {
  
   return (
     <>
-      <div className="navbar fixed top-0 py-6 header-glass z-[100] px-6 lg:px-auto">
+      <div className="navbar fixed top-0 py-6 header-glass z-[100] px-6 md:px-8 xl:px-auto">
         <div className="max-w-[1400px] w-full mx-auto">
           <div className="flex-1">
             <Link href={'/'}>
-              <Image src={Logo} alt="" height={30} className="h-[20px] lg:h-[30px] w-auto" />
+              <Image src={Logo} alt="" height={30} className="h-[20px] xl:h-[30px] w-auto" />
             </Link>
           </div>
           <div className="flex-none">

@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <div className="z-[1]">
       <div className="bg-white w-full border-t border-light-grey py-[60px] lg:py-[100px]">
-        <div className="max-w-[1400px] w-full mx-auto flex flex-col lg:flex-row px-6 lg:px-0">
+        <div className="max-w-[1400px] w-full mx-auto flex flex-col lg:flex-row px-6 md:px-8 xl:px-0">
           <div className="lg:w-[80%] flex lg:flex-col justify-between mb-12 lg:mb-0">
             <Text size="heading-2" weight="ralewayRegular" className="w-[50%]">
               Let&apos;s work together
             </Text>
             <Link href={'/contact'}>
-            <div className="px-5 py-3 border border-primary rounded-full w-fit mt-4 cursor-pointer">
+            <div className="px-5 py-3 border border-primary rounded-full w-fit lg:mt-4 cursor-pointer">
               <Text size="caption">Get in touch</Text>
             </div>
             </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className=" bg-primary-dark h-[60px] w-full flex px-6 lg:px-0">
+      <div className=" bg-primary-dark h-[60px] w-full flex px-6 xl:px-0">
         <div className="max-w-[1400px] w-full mx-auto my-auto">
           <Text size="caption" className="text-white">
             © Copyright 2024. All Rights Reserved. loominace.com

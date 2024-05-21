@@ -23,8 +23,8 @@ const projects = [
 export default function Work() {
   return (
     <div className="relative overflow-hidden">
-      <div className="h-[600px] relative">
-        <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-full flex items-end border-b border-light-grey pb-8">
+      <div className="h-[400px] lg:h-[600px] relative">
+        <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-full flex items-end border-b border-light-grey pb-8 px-6 md:px-8 xl:px-0">
           <Text
             size="heading-1"
             className="w-[80%] leading-[130px]"
@@ -38,13 +38,13 @@ export default function Work() {
       <Image
         src={accentLeft}
         alt=""
-        className="absolute left-0 top-[-150px] h-[1200px] w-auto z-[0]"
+        className="absolute left-0 top-[-150px] h-[700px] lg:h-[1200px] w-auto z-[0]"
       />
-      <div className="max-w-[1400px] w-full mx-auto my-auto py-[90px] mb-[200px]">
-        <div className="w-10/12 grid grid-cols-2 gap-x-16 gap-y-[150px]">
+      <div className="max-w-[1400px] w-full mx-auto my-auto py-[90px] mb-[50px] lg:mb-[200px] px-6 md:px-8 xl:px-0">
+        <div className="lg:w-10/12 grid md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-16 lg:gap-y-[150px]">
           {projects.map((item, index) => (
             <Link href={item.link} key={index}>
-              <div className="w-full h-[700px] shadow-lg">
+              <div className="w-full h-[300px] lg:h-[700px] shadow-lg">
                 <Image
                   src={`/images/${item.img}`}
                   alt=""

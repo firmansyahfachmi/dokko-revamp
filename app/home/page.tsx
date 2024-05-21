@@ -51,8 +51,8 @@ const services = [
 
 export default function Home() {
   return (
-    <div  className="relative overflow-hidden">
-      <div className="h-[750px] lg:h-[100vh] pt-[150px] lg:pt-[200px] z-[2] px-6 lg:px-0">
+    <div className="relative overflow-hidden">
+      <div className="h-[550px] md:h-[600px] lg:h-[700px] xl:h-[100vh] pt-[150px] xl:pt-[200px] z-[2] px-6 md:px-8 xl:px-0">
         <div className="max-w-[1400px] w-full mx-auto my-auto">
           <motion.div
             initial={{ width: 0 }}
@@ -64,7 +64,7 @@ export default function Home() {
           <Text
             weight="ralewayRegular"
             size="heading-1"
-            className="!text-[32px] lg:!text-[85px]"
+            className="!text-[32px] md:!text-[46px] lg:!text-[62px] xl:!text-[85px]"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -75,6 +75,16 @@ export default function Home() {
               Development.
             </motion.div>
           </Text>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 1.8 }}
+          >
+            <Text className="w-[80%] md:w-[60%] xl:w-[40%] mt-16" size="body-2">
+              Discover unrivaled excellence as we elevate your brand, exceeding
+              expectations at every turn.
+            </Text>
+          </motion.div>
         </div>
       </div>
 
@@ -86,25 +96,26 @@ export default function Home() {
         <Image
           src={colorGrade1}
           alt=""
-          className="absolute right-0 top-[280px] lg:top-[150px] h-[400px] lg:h-[1500px] w-auto z-[0]"
+          className="absolute right-[-20px] top-[350px] md:top-[200px] xl:top-[150px] h-[500px] md:h-[700px] xl:h-[1500px] w-auto z-[0]"
         />
       </motion.div>
 
-      <div className="flex h-[100vh] absolute top-[8%] lg:top-[500px] right-[-200px] lg:right-[15%] z-[2] rotate-12">
-        <Scene />
+      <div className="flex h-[100vh] absolute top-[65vh] xl:top-[500px] right-[-260px] xl:right-[15%] z-[2] rotate-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 2.1 }}
+        >
+          <Scene />
+        </motion.div>
       </div>
 
-      <div className="h-fit lg:!h-[25vh] max-w-[1400px] w-full mx-auto my-auto  px-6 lg:px-0">
-        <Text className="w-[80%] lg:w-[45%]" size="body-2">
-          Discover unrivaled excellence as we elevate your brand, exceeding
-          expectations at every turn. With dedication and expertise, we ensure
-          each interaction leaves a lasting impression, immersing customers in
-          transformative experiences.
-        </Text>
-      </div>
-      <div className=" max-w-[1400px] w-full mx-auto mt-[200px] !relative  px-6 lg:px-0">
+      {/* <div className="h-fit xl:!h-[25vh] max-w-[1400px] w-full mx-auto my-auto  px-6 md:px-8 xl:px-0">
+        
+      </div> */}
+      <div className=" max-w-[1400px] w-full mx-auto mt-[250px] !relative  px-6 md:px-8 xl:px-0">
         <Text
-          className="lg:w-[50%]"
+          className="xl:w-[50%]"
           align="justify"
           variant="primary"
           size="heading-5"
@@ -115,20 +126,25 @@ export default function Home() {
         <Projects />
       </div>
 
-      <div className=" max-w-[1400px] w-full mx-auto mt-[100px] lg:mt-[300px] px-6 lg:px-0 z-[2]">
-        <div className="flex flex-col lg:flex-row">
-          <div className="lg:border-r border-primary-dark lg:w-[40%] pt-10">
+      <div className=" max-w-[1400px] w-full mx-auto mt-[100px] xl:mt-[300px] px-6 md:px-8 xl:px-0 z-[2]">
+        <div className="flex flex-col xl:flex-row">
+          <div className="xl:border-r border-primary-dark xl:w-[40%] pt-10">
             <div className="flex items-center gap-10 ">
               <Text size="heading-4">What we do</Text>
-              <Image src={icoArrowRight} height={30} alt="" className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]" />
+              <Image
+                src={icoArrowRight}
+                height={30}
+                alt=""
+                className="h-[20px] w-[20px] xl:h-[30px] xl:w-[30px]"
+              />
             </div>
           </div>
-          <div className="pt-10 lg:w-[60%] lg:pl-[150px] grid lg:grid-cols-2 gap-x-[100px] gap-y-[50px]">
+          <div className="pt-10 xl:w-[60%] xl:pl-[150px] grid md:grid-cols-2 gap-x-[100px] gap-y-[50px]">
             {services.map((item, index) => {
               const { img, title, desc } = item;
               return (
                 <div className="flex flex-col gap-4" key={index}>
-                  <div className="h-[30px] lg:h-[50px] w-[30px] lg:w-[50px]">
+                  <div className="h-[30px] lg:h-[50px] w-auto">
                     <Image
                       src={`/icons/${img}`}
                       alt=""
@@ -150,12 +166,12 @@ export default function Home() {
       </div>
 
       <Image
-          src={accentLeft}
-          alt=""
-          className="absolute left-0 top-[1250px] lg:top-[2000px] h-[600px] lg:h-[1000px] w-auto z-[0]"
-        />
+        src={accentLeft}
+        alt=""
+        className="absolute left-0 top-[1150px] md:top-[1000px] xl:top-[2000px] h-[600px] xl:h-[1000px] w-auto z-[0]"
+      />
 
-      <div className="min-h-[400px] lg:min-h-[700px] max-w-[1400px] w-full mx-auto mt-[180px] lg:mt-[300px] z-[1] px-6 lg:px-0">
+      <div className="min-h-[400px] xl:min-h-[600px] max-w-[1400px] w-full mx-auto mt-[180px] xl:mt-[300px] z-[2] px-6 md:px-8 xl:px-0">
         <Text className="w-[300px] mb-10" variant="primary">
           Partners we&lsquo;ve connected with along our journey.
         </Text>
@@ -179,7 +195,7 @@ export default function Home() {
           </Text>
         </div> */}
 
-        <Link href={"/work"} >
+        <Link href={"/work"}>
           <Text size="caption" className="underline decoration-primary mt-8">
             See more
           </Text>
@@ -187,10 +203,10 @@ export default function Home() {
       </div>
 
       <Image
-          src={accentBottom}
-          alt=""
-          className="absolute right-0 bottom-[-50px] lg:bottom-[-800px] h-[200px] lg:h-[1200px] w-auto z-[0]"
-        />
+        src={accentBottom}
+        alt=""
+        className="absolute right-0 bottom-[-50px] xl:bottom-[-400px] h-[200px] xl:h-[800px] w-auto z-[0]"
+      />
     </div>
   );
 }
