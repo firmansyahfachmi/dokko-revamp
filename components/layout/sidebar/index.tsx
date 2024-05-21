@@ -52,7 +52,7 @@ export default function SideBar({ handleClose }: any) {
       {/* <Curve /> */}
       <div className={styles.body}>
         <div
-          className="w-[74px] h-[74px] rounded-full border border-primary flex cursor-pointer absolute top-10 right-[100px]"
+          className="w-[60px] h-[60px] rounded-full border border-primary flex cursor-pointer absolute top-8 right-[30px] lg:right-[100px]"
           onClick={() => handleClose()}
         >
           <Image
