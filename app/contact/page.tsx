@@ -10,7 +10,7 @@ export default function Contact() {
   const [result, setResult] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: any) => {
     setIsSubmitted(true);
     event.preventDefault();
     setResult("Sending....");
@@ -26,7 +26,9 @@ export default function Contact() {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Thank you for your submission! We will respond to you shortly.");
+      setResult(
+        "Thank you for your submission! We will respond to you shortly."
+      );
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -42,18 +44,23 @@ export default function Contact() {
             className="!text-[32px] md:!text-[46px] lg:!text-[62px] xl:!text-[100px] lg:w-[80%] px-6 md:px-8 xl:px-0"
             weight="ralewayRegular"
           >
-            Generate <span className="text-primary">meaningful</span> creations collectively.
+            Generate <span className="text-primary">meaningful</span> creations
+            collectively.
           </Text>
         </div>
       </div>
 
-      <Image src={accentLeft} alt="" className="absolute left-0 top-[750px] h-[1200px] w-auto z-[0]" />
+      <Image
+        src={accentLeft}
+        alt=""
+        className="absolute left-0 top-[750px] h-[1200px] w-auto z-[0]"
+      />
 
       <div className="max-w-[1400px] w-full mx-auto my-auto py-[90px] lg:py-[190px] px-6 md:px-8 xl:px-0">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-7/12">
             <h2>
-              Let's build <br />
+              Let&apos;s build <br />
               something <span className="text-primary">awesome!</span>
             </h2>
           </div>
@@ -64,26 +71,26 @@ export default function Contact() {
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular"
+                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email address"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular"
+                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
                   required
                 />
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Phone number"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular"
+                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
                   required
                 />
                 <textarea
                   name="message"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular resize-none"
+                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular resize-none !rounded-none"
                   placeholder="Message"
                   rows={5}
                   required

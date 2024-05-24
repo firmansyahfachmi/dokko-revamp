@@ -100,7 +100,7 @@ export default function Home() {
         />
       </motion.div>
 
-      <div className="flex h-[100vh] absolute top-[65vh] xl:top-[500px] right-[-260px] xl:right-[15%] z-[2] rotate-12">
+      <div className="flex h-[70vh] absolute top-[380px] md:top-[250px] lg:top-[350px] xl:top-[450px] right-[-260px] md:right-[-150px] lg:right-[-10%] xl:right-[12%] z-[2] rotate-12">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -113,7 +113,7 @@ export default function Home() {
       {/* <div className="h-fit xl:!h-[25vh] max-w-[1400px] w-full mx-auto my-auto  px-6 md:px-8 xl:px-0">
         
       </div> */}
-      <div className=" max-w-[1400px] w-full mx-auto mt-[250px] !relative  px-6 md:px-8 xl:px-0">
+      <div className=" max-w-[1400px] w-full mx-auto mt-[200px] md:mt-[130px] lg:mt-[200px] !relative  px-6 md:px-8 xl:px-0">
         <Text
           className="xl:w-[50%]"
           align="justify"
@@ -169,7 +169,7 @@ export default function Home() {
       <Image
         src={accentLeft}
         alt=""
-        className="absolute left-0 top-[900px] md:top-[1000px] xl:top-[2000px] h-[600px] xl:h-[1000px] w-auto z-[0]"
+        className="absolute left-0 top-[1100px] md:top-[1100px] xl:top-[2000px] h-[350px] xl:h-[1000px] w-auto z-[0]"
       />
 
       <div className="min-h-[400px] xl:min-h-[600px] max-w-[1400px] w-full mx-auto mt-[180px] xl:mt-[300px] z-[2] px-6 md:px-8 xl:px-0">
