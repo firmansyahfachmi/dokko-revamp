@@ -53,7 +53,7 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-7/12">
             <h2>
-              Let's build <br />
+              Let&apos;s build <br />
               something <span className="text-primary">awesome!</span>
             </h2>
           </div>
