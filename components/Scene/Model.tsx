@@ -5,12 +5,12 @@ import { useControls } from "leva";
 // import LogGlb from '@/public/media/log1.glb'
 
 export default function Models() {
-  const { nodes } = useGLTF("/media/log.glb");
+  const { nodes } = useGLTF("/media/model.glb");
   const { viewport } = useThree();
   const log = useRef<any>(null);
 
   useFrame(() => {
-    log.current.rotation.y += 0.005;
+    log.current.rotation.z += 0.005;
   });
 
   const materialProps = useControls({
@@ -20,17 +20,18 @@ export default function Models() {
     ior: { value: 3, min: 0, max: 3, step: 0.1 },
     chromaticAberration: { value: 0.5, min: 0, max: 1 },
     backside: { value: true },
+    
   });
 
   return (
-    <group ref={log} scale={viewport.width / 9}>
+    <group ref={log} scale={viewport.width / 8}>
       {/* <mesh {...nodes.Circle001}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh> */}
       {/* <mesh {...nodes.Text003}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh> */}
-      <mesh {...nodes.Text001}>
+      <mesh {...nodes.Text003}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>
