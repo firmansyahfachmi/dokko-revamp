@@ -178,14 +178,17 @@ export default function Home() {
         </Text>
         <div className={`flex gap-4 ${styles.partners}`}>
           <Text size="heading-5" className={styles.item}>
+            PPT Energy Singapore
+          </Text>
+          <Text size="heading-5" className={styles.item}>
+            Kalbe
+          </Text>
+          <Text size="heading-5" className={styles.item}>
             Yupiek Food
           </Text>
           <Text size="heading-5" className={styles.item}>
             GMS Farm
           </Text>
-          {/* <Text size="heading-3" className={styles.item}>
-            Cerebrofort
-          </Text> */}
         </div>
         {/* <div className={`flex gap-4 ${styles.partners} mb-8`}>
           <Text size="heading-3" className={styles.item}>

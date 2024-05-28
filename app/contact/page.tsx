@@ -59,53 +59,54 @@ export default function Contact() {
       <div className="max-w-[1400px] w-full mx-auto my-auto py-[90px] lg:py-[190px] px-6 md:px-8 xl:px-0">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-7/12">
-            <h2>
+            <Text size="heading-4">
               Let&apos;s build <br />
               something <span className="text-primary">awesome!</span>
-            </h2>
+            </Text>
           </div>
-          <div className="md:w-5/12 flex flex-col gap-6 mt-10 md:mt-0">
-            {!isSubmitted ? (
-              <form onSubmit={onSubmit}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
-                  required
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
-                  required
-                />
-                <textarea
-                  name="message"
-                  className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular resize-none !rounded-none"
-                  placeholder="Message"
-                  rows={5}
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="px-8 py-3 border border-primary rounded-full w-fit mt-4 cursor-pointer ml-auto hover:bg-primary hover:text-white transition-all duration-200"
-                >
-                  Submit
-                </button>
-              </form>
-            ) : (
-              <p>{result}</p>
-            )}
-          </div>
+          {!isSubmitted ? (
+            <form
+              onSubmit={onSubmit}
+              className="md:w-5/12 flex flex-col gap-6 mt-10 md:mt-0"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
+                required
+              />
+              <textarea
+                name="message"
+                className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular resize-none !rounded-none"
+                placeholder="Message"
+                rows={5}
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className="px-8 py-3 border border-primary rounded-full w-fit mt-4 cursor-pointer ml-auto hover:bg-primary hover:text-white transition-all duration-200"
+              >
+                Submit
+              </button>
+            </form>
+          ) : (
+            <p>{result}</p>
+          )}
         </div>
       </div>
     </div>

@@ -9,6 +9,13 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "PPT Energy Trading Singapore",
+    src: "ppt2.png",
+    color: "#133BF7",
+    category: "Web Development",
+    link: '/work/ppt'
+  },
+  {
     title: "Yupiek Food",
     src: "yupiek.jpg",
     color: "#E33D3F",

@@ -100,9 +100,9 @@ export default function page() {
             <Text size="caption" variant="primary">
               Next Project
             </Text>
-            <Link href={"/work/yupiek"}>
+            <Link href={"/work/ppt"}>
               <div className="flex items-center gap-4">
-                <Text size="heading-6">Yupiek Food </Text>
+                <Text size="heading-6">PPT Energy Trading Singapore </Text>
                 <Image src={icoArrowRight} height={20} alt="" />
               </div>
             </Link>
