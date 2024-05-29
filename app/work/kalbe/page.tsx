@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Text from "@/components/Text";
-import ppt from "@/public/images/ppt.png";
-import ppt2 from "@/public/images/ppt2.png";
-import ppt4 from "@/public/images/ppt4.png";
-import ppt5 from "@/public/images/ppt5.png";
-import pptweb from "@/public/images/ppt-web.jpg";
+import kalbe from "@/public/images/kalbe.png";
+import kalbe1 from "@/public/images/kalbe1.png";
+import kalbe2 from "@/public/images/kalbe2.png";
+import kalbe3 from "@/public/images/kalbe3.webp";
+import kalbeweb from "@/public/images/kalbe-web.png";
 import Link from "next/link";
 import icoArrowRight from "@/public/icons/arrow-right.png";
 import accentLeft from "@/public/images/accent-left.png";
@@ -14,7 +14,7 @@ export default function page() {
   return (
     <>
       <div className="h-[50vh] lg:h-[70vh] z-[2] relative">
-        <Image src={ppt} alt="" className="h-full w-full object-cover" />
+        <Image src={kalbe} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="border-b border-light-grey">
         <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[50px] lg:pt-[90px] pb-[70px] lg:pb-[120px] px-6 md:px-8 xl:px-0">
@@ -23,7 +23,7 @@ export default function page() {
             weight="ralewayRegular"
             size="heading-2"
           >
-            PPT Energy Trading Singapore Website
+            Cerebrofot Talent Search
           </Text>
 
           <div className="flex">
@@ -31,13 +31,13 @@ export default function page() {
               <Text variant="primary" size="caption">
                 Industry
               </Text>
-              <Text size="body-2">Energy Contractor</Text>
+              <Text size="body-2">Farmacy</Text>
             </div>
             <div className="w-6/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
                 Client
               </Text>
-              <Text size="body-2">PPT Energy Trading Singapore</Text>
+              <Text size="body-2">Kalbe</Text>
             </div>
             <div className="w-4/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
@@ -50,14 +50,12 @@ export default function page() {
       </div>
       <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center  min-h-[300px] py-10 lg:min-h-[600px] px-6 md:px-8 xl:px-0">
         <Text>
-        PPT Energy Trading Singapore provides a thorough and fully integrated energy-related business that caters to state-owned companies, private companies, and end users.
-
-With “secure energy” as our core foundation, we source and deliver liquified natural gas (LNG) to our valued customers through ethical and sustainable practices that are grounded in robust commercial principles.
+        Cerebrofort is a multivitamin brand that has been around since 1972 and is available in two variants, namely syrup containing fish oil to maintain health and jelly candy. It is a multivitamin supplement to help children&apos;s growth and development, help the body&apos;s metabolism, and maintain health.
         </Text>
       </div>
       <div className="flex flex-col md:flex-row border-y border-light-grey">
         <div className="md:w-5/12 lg:h-[700px] border-r border-light-grey">
-          <Image src={pptweb} alt="" className="h-full w-full object-cover" />
+          <Image src={kalbeweb} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="md:w-7/12 flex flex-col justify-center items-center py-8 lg:pb-0">
           <div className="w-10/12 lg:w-6/12">
@@ -65,7 +63,7 @@ With “secure energy” as our core foundation, we source and deliver liquified
               Purpose
             </Text>
             <Text size="body-2">
-            Looking ahead to the next decade, the emphasis will be on strengthening our LNG business presence, particularly in the Atlantic and Pacific regions, to solidify our market position. Optimisation of synergy in the global market, with a focus on the B to B business size, will be a key objective to ensure a robust and interconnected presence in international LNG trading. 
+            The talent selection through videos uploaded by parents is a crucial stage in the assessment process on the Cerebrofort Talent Search platform. Through these video submissions, we have the opportunity to discover hidden talents in children, while also allowing parents to showcase their child&apos;s uniqueness and potential.
             </Text>
 
             {/* <Text size="caption" className="mt-[100px]">
@@ -74,17 +72,17 @@ With “secure energy” as our core foundation, we source and deliver liquified
           </div>
         </div>
       </div>
-      <div className="flex z-[1]">
+      {/* <div className="flex z-[1]">
         <div className="h-auto flex-1">
-          <Image src={ppt2} alt="" className="h-full w-full object-contain" />
+          <Image src={kalbe2} alt="" className="h-full w-full object-contain" />
         </div>
         <div className="h-auto flex-1">
-          <Image src={ppt5} alt="" className="h-full w-full object-contain" />
+          <Image src={kalbe1} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="h-auto flex-1">
-          <Image src={ppt4} alt="" className="h-full w-full object-contain" />
+          <Image src={kalbe3} alt="" className="h-full w-full object-contain" />
         </div>
-      </div>
+      </div> */}
 
       <div className="relative overflow-hidden h-fit">
         <Image
@@ -97,9 +95,9 @@ With “secure energy” as our core foundation, we source and deliver liquified
             <Text size="caption" variant="primary">
               Next Project
             </Text>
-            <Link href={"/work/kalbe"}>
+            <Link href={"/work/yupiek"}>
               <div className="flex items-center gap-4">
-                <Text size="heading-6">Cerebrofort Talent Search </Text>
+                <Text size="heading-6">Yupiek Food </Text>
                 <Image src={icoArrowRight} height={20} alt="" />
               </div>
             </Link>

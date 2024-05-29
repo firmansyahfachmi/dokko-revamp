@@ -16,11 +16,11 @@ const projects = [
     link: '/work/ppt'
   },
   {
-    title: "Yupiek Food",
-    src: "yupiek.jpg",
-    color: "#E33D3F",
+    title: "Cerebrofort Talent Search",
+    src: "kalbe.png",
+    color: "#8A1F25",
     category: "Web Development",
-    link: '/work/yupiek'
+    link: '/work/kalbe'
   },
   {
     title: "GMS Farm",
@@ -28,6 +28,13 @@ const projects = [
     color: "#FDAF04",
     category: "Web Development",
     link: '/work/gms'
+  },
+  {
+    title: "Yupiek Food",
+    src: "yupiek.jpg",
+    color: "#E33D3F",
+    category: "Web Development",
+    link: '/work/yupiek'
   },
 ];
 

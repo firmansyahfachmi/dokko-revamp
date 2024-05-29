@@ -7,6 +7,18 @@ import Link from "next/link";
 
 const projects = [
   {
+    name: "PPT Energy Trading Singapore",
+    img: "ppt3.png",
+    category: "Energy",
+    link: "/work/ppt",
+  },
+  {
+    name: "Cerebrofort Talent Search",
+    img: "kalbe2.png",
+    category: "Farmacy",
+    link: "/work/kalbe",
+  },
+  {
     name: "Yupiek Food",
     img: "yupiek.jpg",
     category: "FnB",
