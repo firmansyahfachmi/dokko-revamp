@@ -9,11 +9,25 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Yupiek Food",
-    src: "yupiek.jpg",
-    color: "#E33D3F",
+    title: "PPT Energy Trading Singapore",
+    src: "ppt2.png",
+    color: "#133BF7",
     category: "Web Development",
-    link: '/work/yupiek'
+    link: '/work/ppt'
+  },
+  {
+    title: "Mobile Hauling System",
+    src: "bib.jpg",
+    color: "#B91C1D",
+    category: "Mobile Development",
+    link: '/work/sinarmasmining'
+  },
+  {
+    title: "Cerebrofort Talent Search",
+    src: "kalbe2.png",
+    color: "#8A1F25",
+    category: "Web Development",
+    link: '/work/kalbe'
   },
   {
     title: "GMS Farm",
@@ -22,6 +36,7 @@ const projects = [
     category: "Web Development",
     link: '/work/gms'
   },
+  
 ];
 
 const scaleAnimation = {

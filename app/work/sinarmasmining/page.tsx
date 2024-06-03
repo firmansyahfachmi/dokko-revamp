@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Text from "@/components/Text";
-import yupiek from "@/public/images/yupiek.jpg";
-import yupiek2 from "@/public/images/yupiek2.jpg";
-import yupiek3 from "@/public/images/yupiek3.jpg";
-import yupiek4 from "@/public/images/yupiek4.jpg";
-import yupiekweb from "@/public/images/yupiek-web.jpg";
+import bib from "@/public/images/bib.jpg";
+import bib1 from "@/public/images/bib1.png";
+import bib2 from "@/public/images/bib2.png";
+import bib3 from "@/public/images/bib3.png";
+import bibapp from "@/public/images/bib-app.jpg";
 import Link from "next/link";
 import icoArrowRight from "@/public/icons/arrow-right.png";
 import accentLeft from "@/public/images/accent-left.png";
@@ -14,7 +14,7 @@ export default function page() {
   return (
     <>
       <div className="h-[50vh] lg:h-[70vh] z-[2] relative">
-        <Image src={yupiek2} alt="" className="h-full w-full object-cover" />
+        <Image src={bib} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="border-b border-light-grey">
         <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[50px] lg:pt-[90px] pb-[70px] lg:pb-[120px] px-6 md:px-8 xl:px-0">
@@ -23,7 +23,7 @@ export default function page() {
             weight="ralewayRegular"
             size="heading-2"
           >
-            Yupiek Food Website
+            Mobile Hauling System
           </Text>
 
           <div className="flex">
@@ -31,39 +31,33 @@ export default function page() {
               <Text variant="primary" size="caption">
                 Industry
               </Text>
-              <Text size="body-2">Food and Beverage</Text>
+              <Text size="body-2">Energy</Text>
             </div>
             <div className="w-6/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
                 Client
               </Text>
-              <Text size="body-2">Yupiek Food</Text>
+              <Text size="body-2">Sinarmas Mining</Text>
             </div>
             <div className="w-4/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
                 Services
               </Text>
-              <Text size="body-2">Web Development</Text>
+              <Text size="body-2">Mobile Development</Text>
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center min-h-[300px] py-10  lg:min-h-[600px] px-6 md:px-8 xl:px-0">
+      {/* <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center  min-h-[300px] py-10 lg:min-h-[600px] px-6 md:px-8 xl:px-0">
         <Text>
-          YupiekFood adds value to the ingredients that nature provides, so that
-          can be enjoyed by more people for a longer period of time. Yupiek Food
-          products are made from quality ingredients, without preservatives.
-          Selected raw materials and hygienic production processes are our
-          guarantee of quality.
+        PPT Energy Trading Singapore provides a thorough and fully integrated energy-related business that caters to state-owned companies, private companies, and end users.
+
+With “secure energy” as our core foundation, we source and deliver liquified natural gas (LNG) to our valued customers through ethical and sustainable practices that are grounded in robust commercial principles.
         </Text>
-      </div>
+      </div> */}
       <div className="flex flex-col md:flex-row border-y border-light-grey">
         <div className="md:w-5/12 lg:h-[700px] border-r border-light-grey">
-          <Image
-            src={yupiekweb}
-            alt=""
-            className="h-full w-full object-cover"
-          />
+          <Image src={bibapp} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="md:w-7/12 flex flex-col justify-center items-center py-8 lg:pb-0">
           <div className="w-10/12 lg:w-6/12">
@@ -71,11 +65,9 @@ export default function page() {
               Purpose
             </Text>
             <Text size="body-2">
-              The website page for Yupiek Food serves as a vital platform for
-              informing consumers about our dedication to quality ingredients
-              and preservative-free products. Through transparent sourcing,
-              diverse offerings, and educational resources, it facilitates
-              informed choices while offering convenient online shopping.
+            We&apos;re involved in the development of a platform called Mobile Hauling System. It aids in monitoring excavator operations in the field and provides insights into the working conditions of the operators.
+
+
             </Text>
 
             {/* <Text size="caption" className="mt-[100px]">
@@ -86,21 +78,13 @@ export default function page() {
       </div>
       <div className="flex z-[1]">
         <div className="h-auto flex-1">
-          <Image src={yupiek} alt="" className="h-full w-full object-contain" />
+          <Image src={bib1} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="h-auto flex-1">
-          <Image
-            src={yupiek3}
-            alt=""
-            className="h-full w-full object-contain"
-          />
+          <Image src={bib3} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="h-auto flex-1">
-          <Image
-            src={yupiek4}
-            alt=""
-            className="h-full w-full object-contain"
-          />
+          <Image src={bib2} alt="" className="h-full w-full object-cover" />
         </div>
       </div>
 
@@ -115,9 +99,9 @@ export default function page() {
             <Text size="caption" variant="primary">
               Next Project
             </Text>
-            <Link href={"/work/ppt"}>
+            <Link href={"/work/kalbe"}>
               <div className="flex items-center gap-4">
-                <Text size="heading-6">PPT Energy Trading Singapore </Text>
+                <Text size="heading-6">Cerebrofort Talent Search </Text>
                 <Image src={icoArrowRight} height={20} alt="" />
               </div>
             </Link>
