@@ -14,7 +14,7 @@ export default function page() {
   return (
     <>
       <div className="h-[50vh] lg:h-[70vh] z-[2] relative">
-        <Image src={kalbe} alt="" className="h-full w-full object-cover" />
+        <Image src={kalbe2} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="border-b border-light-grey">
         <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[50px] lg:pt-[90px] pb-[70px] lg:pb-[120px] px-6 md:px-8 xl:px-0">
@@ -72,17 +72,17 @@ export default function page() {
           </div>
         </div>
       </div>
-      {/* <div className="flex z-[1]">
-        <div className="h-auto flex-1">
-          <Image src={kalbe2} alt="" className="h-full w-full object-contain" />
-        </div>
+      <div className="flex z-[1]">
         <div className="h-auto flex-1">
           <Image src={kalbe1} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="h-auto flex-1">
-          <Image src={kalbe3} alt="" className="h-full w-full object-contain" />
+          <Image src={kalbe} alt="" className="h-full w-full object-cover" />
         </div>
-      </div> */}
+        {/* <div className="h-auto flex-1">
+          <Image src={kalbe3} alt="" className="h-full w-full object-contain" />
+        </div> */}
+      </div>
 
       <div className="relative overflow-hidden h-fit">
         <Image
@@ -95,9 +95,9 @@ export default function page() {
             <Text size="caption" variant="primary">
               Next Project
             </Text>
-            <Link href={"/work/yupiek"}>
+            <Link href={"/work/gms"}>
               <div className="flex items-center gap-4">
-                <Text size="heading-6">Yupiek Food </Text>
+                <Text size="heading-6">GMS Farm </Text>
                 <Image src={icoArrowRight} height={20} alt="" />
               </div>
             </Link>

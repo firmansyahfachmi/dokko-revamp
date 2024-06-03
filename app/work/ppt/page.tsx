@@ -31,7 +31,7 @@ export default function page() {
               <Text variant="primary" size="caption">
                 Industry
               </Text>
-              <Text size="body-2">Energy Contractor</Text>
+              <Text size="body-2">Energy</Text>
             </div>
             <div className="w-6/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
@@ -97,9 +97,9 @@ With “secure energy” as our core foundation, we source and deliver liquified
             <Text size="caption" variant="primary">
               Next Project
             </Text>
-            <Link href={"/work/kalbe"}>
+            <Link href={"/work/sinarmasmining"}>
               <div className="flex items-center gap-4">
-                <Text size="heading-6">Cerebrofort Talent Search </Text>
+                <Text size="heading-6">Mobile Hauling System </Text>
                 <Image src={icoArrowRight} height={20} alt="" />
               </div>
             </Link>

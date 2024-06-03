@@ -16,8 +16,15 @@ const projects = [
     link: '/work/ppt'
   },
   {
+    title: "Mobile Hauling System",
+    src: "bib.jpg",
+    color: "#B91C1D",
+    category: "Mobile Development",
+    link: '/work/sinarmasmining'
+  },
+  {
     title: "Cerebrofort Talent Search",
-    src: "kalbe.png",
+    src: "kalbe2.png",
     color: "#8A1F25",
     category: "Web Development",
     link: '/work/kalbe'
@@ -29,13 +36,7 @@ const projects = [
     category: "Web Development",
     link: '/work/gms'
   },
-  {
-    title: "Yupiek Food",
-    src: "yupiek.jpg",
-    color: "#E33D3F",
-    category: "Web Development",
-    link: '/work/yupiek'
-  },
+  
 ];
 
 const scaleAnimation = {

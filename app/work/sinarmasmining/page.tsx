@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Text from "@/components/Text";
-import gms from "@/public/images/gms.jpg";
-import gms2 from "@/public/images/gms-2.jpeg";
-import gms3 from "@/public/images/gms-3.jpeg";
-import gmsweb from "@/public/images/gms-web.jpg";
+import bib from "@/public/images/bib.jpg";
+import bib1 from "@/public/images/bib1.png";
+import bib2 from "@/public/images/bib2.png";
+import bib3 from "@/public/images/bib3.png";
+import bibapp from "@/public/images/bib-app.jpg";
 import Link from "next/link";
 import icoArrowRight from "@/public/icons/arrow-right.png";
 import accentLeft from "@/public/images/accent-left.png";
@@ -13,7 +14,7 @@ export default function page() {
   return (
     <>
       <div className="h-[50vh] lg:h-[70vh] z-[2] relative">
-        <Image src={gms} alt="" className="h-full w-full object-cover" />
+        <Image src={bib} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="border-b border-light-grey">
         <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[50px] lg:pt-[90px] pb-[70px] lg:pb-[120px] px-6 md:px-8 xl:px-0">
@@ -22,7 +23,7 @@ export default function page() {
             weight="ralewayRegular"
             size="heading-2"
           >
-            GMS Farm Website
+            Mobile Hauling System
           </Text>
 
           <div className="flex">
@@ -30,37 +31,33 @@ export default function page() {
               <Text variant="primary" size="caption">
                 Industry
               </Text>
-              <Text size="body-2">Food and Beverage</Text>
+              <Text size="body-2">Energy</Text>
             </div>
             <div className="w-6/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
                 Client
               </Text>
-              <Text size="body-2">Gudang Madu Sumatera</Text>
+              <Text size="body-2">Sinarmas Mining</Text>
             </div>
             <div className="w-4/12 flex flex-col gap-2">
               <Text variant="primary" size="caption">
                 Services
               </Text>
-              <Text size="body-2">Web Development</Text>
+              <Text size="body-2">Mobile Development</Text>
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center  min-h-[300px] py-10 lg:min-h-[600px] px-6 md:px-8 xl:px-0">
+      {/* <div className="max-w-[1400px] w-full mx-auto my-auto flex items-center  min-h-[300px] py-10 lg:min-h-[600px] px-6 md:px-8 xl:px-0">
         <Text>
-          Gudang Madu Sumatera (GMS) is an integrated sustainable beekeeping
-          company built on the foundation of empowering forest communities in
-          Indonesia. They produce a wide range of bee products such as pure raw
-          honey, beeswax, raw propolis, bee pollen, and various other bee
-          products. GMS provides top-quality products sourced from hives,
-          created with honesty and integrity while maintaining a greater
-          awareness and support for the environment.
+        PPT Energy Trading Singapore provides a thorough and fully integrated energy-related business that caters to state-owned companies, private companies, and end users.
+
+With “secure energy” as our core foundation, we source and deliver liquified natural gas (LNG) to our valued customers through ethical and sustainable practices that are grounded in robust commercial principles.
         </Text>
-      </div>
+      </div> */}
       <div className="flex flex-col md:flex-row border-y border-light-grey">
         <div className="md:w-5/12 lg:h-[700px] border-r border-light-grey">
-          <Image src={gmsweb} alt="" className="h-full w-full object-cover" />
+          <Image src={bibapp} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="md:w-7/12 flex flex-col justify-center items-center py-8 lg:pb-0">
           <div className="w-10/12 lg:w-6/12">
@@ -68,7 +65,9 @@ export default function page() {
               Purpose
             </Text>
             <Text size="body-2">
-            The webpage representing Gudang Madu Sumatera (GMS) plays a pivotal role in informing consumers about our dedication to quality ingredients and preservative-free bee products. By promoting transparency in sourcing, offering a diverse selection, and providing educational resources, it enables consumers to make well-informed decisions while also offering convenient online purchasing options.
+            We&apos;re involved in the development of a platform called Mobile Hauling System. It aids in monitoring excavator operations in the field and provides insights into the working conditions of the operators.
+
+
             </Text>
 
             {/* <Text size="caption" className="mt-[100px]">
@@ -79,14 +78,14 @@ export default function page() {
       </div>
       <div className="flex z-[1]">
         <div className="h-auto flex-1">
-          <Image src={gms2} alt="" className="h-full w-full object-contain" />
+          <Image src={bib1} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="h-auto flex-1">
-          <Image src={gms3} alt="" className="h-full w-full object-contain" />
+          <Image src={bib3} alt="" className="h-full w-full object-cover" />
         </div>
-        {/* <div className="h-auto flex-1">
-          <Image src={gms3} alt="" className="h-full w-full object-contain" />
-        </div> */}
+        <div className="h-auto flex-1">
+          <Image src={bib2} alt="" className="h-full w-full object-cover" />
+        </div>
       </div>
 
       <div className="relative overflow-hidden h-fit">
@@ -100,9 +99,9 @@ export default function page() {
             <Text size="caption" variant="primary">
               Next Project
             </Text>
-            <Link href={"/work/yupiek"}>
+            <Link href={"/work/kalbe"}>
               <div className="flex items-center gap-4">
-                <Text size="heading-6">Yupiek Food </Text>
+                <Text size="heading-6">Cerebrofort Talent Search </Text>
                 <Image src={icoArrowRight} height={20} alt="" />
               </div>
             </Link>

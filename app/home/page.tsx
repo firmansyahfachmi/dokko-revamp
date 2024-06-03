@@ -19,11 +19,11 @@ const Scene = dynamic(() => import("@/components/Scene"), {
 });
 
 const partners = [
-  "Yupiek Food",
+  "PPT Energy Trading Singapore",
+  "Sinarmas Mining",
+  "Kalbe",
   "GMS Farm",
-  "Oneproklin",
-  "Cerberofort",
-  "PPT Energy Singapore",
+  "Yupiek Food",
 ];
 
 const services = [
@@ -172,32 +172,39 @@ export default function Home() {
         className="absolute left-0 top-[1100px] md:top-[1100px] xl:top-[2000px] h-[350px] xl:h-[1000px] w-auto z-[0]"
       />
 
-      <div className="min-h-[400px] xl:min-h-[600px] max-w-[1400px] w-full mx-auto mt-[180px] xl:mt-[300px] z-[2] px-6 md:px-8 xl:px-0">
+      <div className="min-h-[550px] xl:min-h-[600px] max-w-[1400px] w-full mx-auto mt-[180px] xl:mt-[300px] z-[2] px-6 md:px-8 xl:px-0">
         <Text className="w-[300px] mb-10" variant="primary">
           Partners we&lsquo;ve connected with along our journey.
         </Text>
-        <div className={`flex gap-4 ${styles.partners}`}>
-          <Text size="heading-5" className={styles.item}>
-            PPT Energy Singapore
-          </Text>
-          <Text size="heading-5" className={styles.item}>
-            Kalbe
-          </Text>
-          <Text size="heading-5" className={styles.item}>
-            Yupiek Food
-          </Text>
-          <Text size="heading-5" className={styles.item}>
-            GMS Farm
-          </Text>
+        <div className="hidden md:block">
+          <div className={`flex gap-4 ${styles.partners}`}>
+            <Text size="heading-5" className={styles.item}>
+              PPT Energy Singapore
+            </Text>
+            <Text size="heading-5" className={styles.item}>
+              Sinarmas Mining
+            </Text>
+            <Text size="heading-5" className={styles.item}>
+              Kalbe
+            </Text>
+          </div>
+          <div className={`flex gap-4 ${styles.partners} mb-8`}>
+            
+            <Text size="heading-5" className={styles.item}>
+              GMS Farm
+            </Text>
+            <Text size="heading-5" className={styles.item}>
+              Yupiek Food
+            </Text>
+          </div>
         </div>
-        {/* <div className={`flex gap-4 ${styles.partners} mb-8`}>
-          <Text size="heading-3" className={styles.item}>
-            Oneproklin
+        <div className="flex flex-col gap-3 md:hidden">
+          {partners.map((partner, index) => 
+          <Text size="heading-6" className={index != partners.length - 1? `border-b border-primary pb-3` : ''} key={index}>
+            {partner}
           </Text>
-          <Text size="heading-3" className={styles.item}>
-            PPT Energy Singapore
-          </Text>
-        </div> */}
+          )}
+        </div>
 
         <Link href={"/work"}>
           <Text size="caption" className="underline decoration-primary mt-8">
