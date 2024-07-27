@@ -9,14 +9,18 @@ import Link from "next/link";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useForm } from "react-hook-form";
 
-import { ToastContainer, toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 
 export default function Contact() {
   const [result, setResult] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [captcha, setCaptcha] = useState(false);
   const { handleSubmit, setValue } = useForm();
+
+  const Router = useRouter();
 
   const onHCaptchaChange = (token: any) => {
     setValue("h-captcha-response", token);
@@ -41,6 +45,9 @@ export default function Contact() {
         toast.success(
           "Thank you for your submission! We will respond to you shortly."
         );
+        setTimeout(() => {
+          Router.push("/");
+        }, 2000);
       } else {
         toast.error(data.message);
       }
@@ -142,7 +149,7 @@ export default function Contact() {
 
               <div className="flex justify-between items-center mt-4">
                 <HCaptcha
-                  sitekey="0e6b075a-fddd-4d07-9a1c-b7ae10140bf5"
+                  sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
                   reCaptchaCompat={false}
                   onVerify={onHCaptchaChange}
                 />
