@@ -6,21 +6,29 @@ import contactHero from "@/public/images/hero-contact.png";
 import Text from "@/components/Text";
 import accentLeft from "@/public/images/accent-left.png";
 import Link from "next/link";
-import ReCAPTCHA from "react-google-recaptcha";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useForm } from "react-hook-form";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const [result, setResult] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [captcha, setCaptcha] = useState<string | null>();
+  const [captcha, setCaptcha] = useState(false);
+  const { handleSubmit, setValue } = useForm();
+
+  const onHCaptchaChange = (token: any) => {
+    setValue("h-captcha-response", token);
+    if (token) setCaptcha(true);
+  };
 
   const onSubmit = async (event: any) => {
     if (captcha) {
       setIsSubmitted(true);
-      event.preventDefault();
-      setResult("Sending....");
       const formData = new FormData(event.target);
 
-      formData.append("access_key", process.env.WEB3_FORMS_ACCESS_KEY || "");
+      formData.append("access_key", "0e6b075a-fddd-4d07-9a1c-b7ae10140bf5");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -30,15 +38,14 @@ export default function Contact() {
       const data = await response.json();
 
       if (data.success) {
-        setResult(
+        toast.success(
           "Thank you for your submission! We will respond to you shortly."
         );
       } else {
-        console.log("Error", data);
-        setResult(data.message);
+        toast.error(data.message);
       }
     } else {
-      setResult("Captcha is required");
+      toast.warn("Fill the Captcha");
     }
   };
 
@@ -98,7 +105,7 @@ export default function Contact() {
           </div>
           {!isSubmitted ? (
             <form
-              onSubmit={onSubmit}
+              onSubmit={handleSubmit(onSubmit)}
               className="md:w-5/12 flex flex-col gap-6 mt-10 md:mt-0"
             >
               <input
@@ -118,6 +125,9 @@ export default function Contact() {
               <input
                 type="tel"
                 name="phone"
+                onChange={(e) => {
+                  e.target.value = e.target.value.replace(/\D/g, "");
+                }}
                 placeholder="Phone number"
                 className="!border-b border-light-grey w-full !outline-none !shadow-none py-3 font-DMSans-Regular !rounded-none"
                 required
@@ -131,9 +141,10 @@ export default function Contact() {
               ></textarea>
 
               <div className="flex justify-between items-center mt-4">
-                <ReCAPTCHA
-                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
-                  onChange={setCaptcha}
+                <HCaptcha
+                  sitekey="0e6b075a-fddd-4d07-9a1c-b7ae10140bf5"
+                  reCaptchaCompat={false}
+                  onVerify={onHCaptchaChange}
                 />
                 <button
                   type="submit"
@@ -147,6 +158,19 @@ export default function Contact() {
             <p>{result}</p>
           )}
         </div>
+
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable={false}
+          pauseOnHover={false}
+          theme="light"
+        />
       </div>
     </div>
   );
