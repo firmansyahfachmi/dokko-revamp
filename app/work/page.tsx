@@ -57,6 +57,7 @@ export default function Work() {
         src={accentLeft}
         alt=""
         className="absolute left-0 top-[-150px] h-[700px] lg:h-[1200px] w-auto z-[0]"
+        loading="lazy"
       />
       <div className="max-w-[1400px] w-full mx-auto my-auto py-[90px] mb-[50px] lg:mb-[200px] px-6 md:px-8 xl:px-0">
         <div className="lg:w-10/12 grid md:grid-cols-3 gap-x-8 lg:gap-x-16 gap-y-16 lg:gap-y-[150px]">
@@ -69,6 +70,7 @@ export default function Work() {
                   className="!w-full !h-full object-cover"
                   width={1000}
                   height={1000}
+                  loading="lazy"
                 />
               </div>
               <div className="pl-5 mt-6">

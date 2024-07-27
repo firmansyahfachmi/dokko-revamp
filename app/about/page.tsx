@@ -27,7 +27,7 @@ export default function About() {
   return (
     <div className="relative overflow-hidden">
       <div className="h-[60vh] xl:h-[100vh] z-[2] relative">
-        <Image src={aboutHero} alt="" className="h-full w-full object-cover" />
+        <Image src={aboutHero} alt="" className="h-full w-full object-cover" loading="lazy" />
         <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-full flex items-center">
           <Text
             className="!text-[32px] md:!text-[46px] lg:!text-[62px] xl:!text-[100px] lg:w-[70%] px-6 md:px-8 xl:px-0"

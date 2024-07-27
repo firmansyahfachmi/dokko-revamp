@@ -14,7 +14,7 @@ export default function page() {
   return (
     <>
       <div className="h-[50vh] lg:h-[70vh] z-[2] relative">
-        <Image src={yupiek2} alt="" className="h-full w-full object-cover" />
+        <Image src={yupiek2} alt="" className="h-full w-full object-cover" loading="lazy" />
       </div>
       <div className="border-b border-light-grey">
         <div className="max-w-[1400px] w-full mx-auto my-auto  h-full pt-[50px] lg:pt-[90px] pb-[70px] lg:pb-[120px] px-6 md:px-8 xl:px-0">
@@ -62,7 +62,7 @@ export default function page() {
           <Image
             src={yupiekweb}
             alt=""
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover" loading="lazy"
           />
         </div>
         <div className="md:w-7/12 flex flex-col justify-center items-center py-8 lg:pb-0">
@@ -86,20 +86,20 @@ export default function page() {
       </div>
       <div className="flex z-[1]">
         <div className="h-auto flex-1">
-          <Image src={yupiek} alt="" className="h-full w-full object-contain" />
+          <Image src={yupiek} alt="" className="h-full w-full object-contain" loading="lazy" />
         </div>
         <div className="h-auto flex-1">
           <Image
             src={yupiek3}
             alt=""
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain" loading="lazy"
           />
         </div>
         <div className="h-auto flex-1">
           <Image
             src={yupiek4}
             alt=""
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain" loading="lazy"
           />
         </div>
       </div>
@@ -108,7 +108,7 @@ export default function page() {
         <Image
           src={accentLeft}
           alt=""
-          className="absolute left-0 bottom-[-760px] h-[1200px] w-auto z-[0] hidden md:block"
+          className="absolute left-0 bottom-[-760px] h-[1200px] w-auto z-[0] hidden md:block" loading="lazy"
         />
         <div className="max-w-[1400px] w-full mx-auto my-auto flex flex-col items-center justify-center h-[150px]  lg:h-[250px] px-6 md:px-8 xl:px-0">
           <div className="flex flex-col items-end gap-4 w-full">
@@ -118,7 +118,7 @@ export default function page() {
             <Link href={"/work/ppt"}>
               <div className="flex items-center gap-4">
                 <Text size="heading-6">PPT Energy Trading Singapore </Text>
-                <Image src={icoArrowRight} height={20} alt="" />
+                <Image src={icoArrowRight} height={20} alt="" loading="lazy" />
               </div>
             </Link>
           </div>

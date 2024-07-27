@@ -97,6 +97,7 @@ export default function Home() {
           src={colorGrade1}
           alt=""
           className="absolute right-[-20px] top-[350px] md:top-[200px] xl:top-[150px] h-[500px] md:h-[700px] xl:h-[1500px] w-auto z-[0]"
+          loading="lazy"
         />
       </motion.div>
 
@@ -136,6 +137,7 @@ export default function Home() {
                 height={30}
                 alt=""
                 className="h-[20px] w-[20px] xl:h-[30px] xl:w-[30px]"
+                loading="lazy"
               />
             </div>
           </div>
@@ -151,6 +153,7 @@ export default function Home() {
                       width={50}
                       height={50}
                       className="object-contain"
+                      loading="lazy"
                     />
                   </div>
                   <Text weight="medium" size="body-1">
@@ -170,6 +173,7 @@ export default function Home() {
         src={accentLeft}
         alt=""
         className="absolute left-0 top-[1100px] md:top-[1100px] xl:top-[2000px] h-[350px] xl:h-[1000px] w-auto z-[0]"
+        loading="lazy"
       />
 
       <div className="min-h-[550px] xl:min-h-[600px] max-w-[1400px] w-full mx-auto mt-[180px] xl:mt-[300px] z-[2] px-6 md:px-8 xl:px-0">
@@ -217,6 +221,7 @@ export default function Home() {
         src={accentBottom}
         alt=""
         className="absolute right-0 bottom-[-50px] xl:bottom-[-400px] h-[200px] xl:h-[800px] w-auto z-[0]"
+        loading="lazy"
       />
     </div>
   );

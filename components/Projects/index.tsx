@@ -13,30 +13,29 @@ const projects = [
     src: "ppt2.png",
     color: "#133BF7",
     category: "Web Development",
-    link: '/work/ppt'
+    link: "/work/ppt",
   },
   {
     title: "Mobile Hauling System",
     src: "bib.jpg",
     color: "#B91C1D",
     category: "Mobile Development",
-    link: '/work/sinarmasmining'
+    link: "/work/sinarmasmining",
   },
   {
     title: "Cerebrofort Talent Search",
     src: "kalbe2.png",
     color: "#8A1F25",
     category: "Web Development",
-    link: '/work/kalbe'
+    link: "/work/kalbe",
   },
   {
     title: "GMS Farm",
     src: "gms.jpg",
     color: "#FDAF04",
     category: "Web Development",
-    link: '/work/gms'
+    link: "/work/gms",
   },
-  
 ];
 
 const scaleAnimation = {
@@ -161,6 +160,7 @@ export default function Projects() {
                     width={300}
                     height={0}
                     alt="image"
+                    loading="lazy"
                   />
                 </div>
               );
