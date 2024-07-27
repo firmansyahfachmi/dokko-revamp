@@ -58,7 +58,7 @@ export default function SideBar({ handleClose }: any) {
           <Image
             src={icoClose}
             alt=""
-            className="mx-auto my-auto w-[30px] h-[30px]"
+            className="mx-auto my-auto w-[30px] h-[30px]" loading="lazy"
           />
         </div>
         <div

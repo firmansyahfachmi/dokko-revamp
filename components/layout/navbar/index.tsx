@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="max-w-[1400px] w-full mx-auto">
           <div className="flex-1">
             <Link href={'/'}>
-              <Image src={Logo} alt="" height={30} className="h-[20px] xl:h-[30px] w-auto" />
+              <Image src={Logo} alt="" height={30} className="h-[20px] xl:h-[30px] w-auto" loading="lazy" />
             </Link>
           </div>
           <div className="flex-none">
@@ -37,7 +37,7 @@ export default function Navbar() {
                 setIsActive(!isActive);
               }}
             >
-              <Image src={Iconav} alt="" height={30} />
+              <Image src={Iconav} alt="" height={30} loading="lazy" />
             </a>
           </div>
         </div>

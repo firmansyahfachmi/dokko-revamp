@@ -6,40 +6,51 @@ import contactHero from "@/public/images/hero-contact.png";
 import Text from "@/components/Text";
 import accentLeft from "@/public/images/accent-left.png";
 import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [result, setResult] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [captcha, setCaptcha] = useState<string | null>();
 
   const onSubmit = async (event: any) => {
-    setIsSubmitted(true);
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    if (captcha) {
+      setIsSubmitted(true);
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
 
-    formData.append("access_key", "0e6b075a-fddd-4d07-9a1c-b7ae10140bf5");
+      formData.append("access_key", process.env.WEB3_FORMS_ACCESS_KEY || "");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult(
-        "Thank you for your submission! We will respond to you shortly."
-      );
+      if (data.success) {
+        setResult(
+          "Thank you for your submission! We will respond to you shortly."
+        );
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
     } else {
-      console.log("Error", data);
-      setResult(data.message);
+      setResult("Captcha is required");
     }
   };
 
   return (
     <div className="relative overflow-hidden">
       <div className="h-[60vh] xl:h-[100vh] z-[2] relative">
-        <Image src={contactHero} alt="" className="h-full w-full" />
+        <Image
+          src={contactHero}
+          alt=""
+          className="h-full w-full"
+          loading="lazy"
+        />
         <div className="max-w-[1400px] w-full mx-auto my-auto absolute top-0 left-0 bottom-0 right-0 h-[30%] lg:h-[50%] flex flex-col justify-between ">
           <Text
             className="!text-[32px] md:!text-[46px] lg:!text-[62px] xl:!text-[100px] lg:w-[80%] px-6 md:px-8 xl:px-0"
@@ -64,7 +75,7 @@ export default function Contact() {
               </Text>
               <Link href="https://wa.link/4vi4zf" target="_tab">
                 <Text size="body-2">+62 823 3672 4500</Text>
-                </Link>
+              </Link>
             </div>
           </div>
         </div>
@@ -74,6 +85,7 @@ export default function Contact() {
         src={accentLeft}
         alt=""
         className="absolute left-0 top-[750px] h-[1200px] w-auto z-[0]"
+        loading="lazy"
       />
 
       <div className="max-w-[1400px] w-full mx-auto my-auto py-[90px] lg:py-[190px] px-6 md:px-8 xl:px-0">
@@ -117,12 +129,19 @@ export default function Contact() {
                 rows={5}
                 required
               ></textarea>
-              <button
-                type="submit"
-                className="px-8 py-3 border border-primary rounded-full w-fit mt-4 cursor-pointer ml-auto hover:bg-primary hover:text-white transition-all duration-200"
-              >
-                Submit
-              </button>
+
+              <div className="flex justify-between items-center mt-4">
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+                  onChange={setCaptcha}
+                />
+                <button
+                  type="submit"
+                  className="px-8 py-3 border border-primary rounded-full w-fit  cursor-pointer ml-auto hover:bg-primary hover:text-white transition-all duration-200"
+                >
+                  Submit
+                </button>
+              </div>
             </form>
           ) : (
             <p>{result}</p>
